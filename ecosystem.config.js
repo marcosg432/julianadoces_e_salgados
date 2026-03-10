@@ -1,8 +1,7 @@
 module.exports = {
   apps: [{
     name: 'juliana-doces-salgados',
-    script: 'node_modules/serve/build/main.js',
-    args: ['-p', '3005'],
+    script: 'server.js',
     cwd: __dirname,
     env: {
       NODE_ENV: 'production'
