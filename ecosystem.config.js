@@ -2,7 +2,7 @@ module.exports = {
   apps: [{
     name: 'juliana-doces-salgados',
     script: 'node_modules/serve/build/main.js',
-    args: ['-p', '3005', '-s'],
+    args: ['-p', '3005'],
     cwd: __dirname,
     env: {
       NODE_ENV: 'production'

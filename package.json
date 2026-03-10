@@ -4,7 +4,7 @@
   "description": "Cardápio digital Juliana Doces e Salgados",
   "main": "index.html",
   "scripts": {
-    "start": "serve -p 3005 -s",
+    "start": "serve -p 3005",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
