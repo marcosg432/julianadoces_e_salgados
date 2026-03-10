@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Doces | Juliana Doces e Salgados</title>
+    <meta name="description" content="Confira nossa seleção de doces artesanais. Brigadeiros, trufas, ovos de chocolate e muito mais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/doces.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar--scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Juliana Doces e Salgados</a>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu">
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Início</a>
+                <div class="menu-cardapio" id="menu-cardapio">
+                    <a href="index.html#cardapio" class="navbar-link navbar-link--has-submenu" id="cardapio-trigger">Cardápio</a>
+                    <ul class="submenu" id="submenu-cardapio">
+                        <li><a href="doces.html" class="submenu-link submenu-link--active">Doces</a></li>
+                        <li><a href="salgados.html" class="submenu-link">Salgados</a></li>
+                    </ul>
+                </div>
+                <a href="index.html#kits" class="navbar-link">Kits</a>
+                <a href="index.html#whatsapp" class="btn btn-primary btn-navbar" data-whatsapp>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO DOCES -->
+    <main class="doces-page">
+        <section class="doces-section" id="doces">
+            <div class="container">
+                <h1 class="section-title">Doces</h1>
+                <p class="section-subtitle">Nossa seleção de doces artesanais feitos com carinho</p>
+                <div class="doces-grid cardapio-grid">
+                    <!-- Card 1 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-1" data-images='["images/doces/doce_1.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_1.webp" alt="Brigadeiro de ouriço de coco" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de ouriço de coco</h3>
+                            <p>Massa feita com coco, passado em calda de açúcar e envolto em coco queimado.</p>
+                            <span class="produto-price">R$ 2,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de ouriço de coco - R$ 2,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-2" data-images='["images/doces/doce_2.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_2.webp" alt="Brigadeiro de moranguinho" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de moranguinho</h3>
+                            <p>Massa feita com essencia de morango, e corante vermelho passado no açucar vermelho.</p>
+                            <span class="produto-price">R$ 2,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de moranguinho - R$ 2,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-3" data-images='["images/doces/doce_3.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_3.webp" alt="Brigadeiro de camafeu" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de camafeu</h3>
+                            <p>Massa feita com nozes trituradas banhada em chocolate branco finalizado com uma noz em cima.</p>
+                            <span class="produto-price">R$ 3,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de camafeu - R$ 3,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-4" data-images='["images/doces/doce_4.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_4.webp" alt="Brigadeiro de Oreo com mini bolacha de Oreo em cima" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de Oreo com mini bolacha de Oreo em cima</h3>
+                            <p>Massa feita com bolacha Oreo triturada passada no Leite Ninho finalizado com mini Oreo em cima.</p>
+                            <span class="produto-price">R$ 2,80</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de Oreo com mini bolacha de Oreo em cima - R$ 2,80">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 5 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-5" data-images='["images/doces/doce_5.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_5.webp" alt="Brigadeiro de cappuccino" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de cappuccino</h3>
+                            <p>Massa feita com chocolate 50% cacau, café solúvel e canela, passada no açúcar.</p>
+                            <span class="produto-price">R$ 3,20</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de cappuccino - R$ 3,20">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 6 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-6" data-images='["images/doces/doce_6.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_6.webp" alt="Brigadeiro de casadinho" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de casadinho</h3>
+                            <p>Massa de chocolate preto 50% cacau e chocolate branco, passado no açúcar cristal.</p>
+                            <span class="produto-price">R$ 4,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de casadinho - R$ 4,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 7 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-8" data-images='["images/doces/doce_8.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_8.webp" alt="Brigadeiro M&amp;M" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro M&amp;M</h3>
+                            <p>Massa feita com Leite Ninho e M&amp;M, com M&amp;M em cima também.</p>
+                            <span class="produto-price">R$ 3,80</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro M&amp;M - R$ 3,80">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 8 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-9" data-images='["images/doces/doce_9.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_9.webp" alt="Brigadeiro Chocoballs" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro Chocoballs</h3>
+                            <p>Massa feita com brigadeiro de chocolate 50% cacau passado em Chocoballs.</p>
+                            <span class="produto-price">R$ 3,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro Chocoballs - R$ 3,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 9 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-10" data-images='["images/doces/doce_10.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_10.webp" alt="Brigadeiro de olho de sogra" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de olho de sogra</h3>
+                            <p>Massa feita com brigadeiro de coco envolvido em ameixa, passado no açúcar cristal.</p>
+                            <span class="produto-price">R$ 3,20</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de olho de sogra - R$ 3,20">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 10 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-11" data-images='["images/doces/doce_11.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_11.webp" alt="Mini churros fritos" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Mini churros fritos</h3>
+                            <p>Massa crocante com recheio de doce de leite, passados no açúcar e canela.</p>
+                            <span class="produto-price">R$ 3,80</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Mini churros fritos - R$ 3,80">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 11: Brigadeiro de limão siciliano - apenas doce_12 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-12" data-images='["images/doces/doce_12.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_12.webp" alt="Brigadeiro de limão siciliano" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de limão siciliano</h3>
+                            <p>Massa feita com pasta concentrada de limão siciliano, passada no granulado de chocolate branco.</p>
+                            <span class="produto-price">R$ 89,90</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de limão siciliano - R$ 89,90">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 12: Brigadeiro de Ninho com formato de flor - doce_15, 13, 14 com carrossel -->
+                    <article class="produto-card doces-card doces-card--carousel" data-aos data-doces-id="doce-15-13-14" data-images='["images/doces/doce_15.webp","images/doces/doce_13.webp","images/doces/doce_14.webp"]'>
+                        <div class="produto-image produto-image--carousel">
+                            <div class="doces-carousel" data-carousel>
+                                <img src="images/doces/doce_15.webp" alt="Brigadeiro de Ninho com formato de flor e corante" loading="lazy">
+                                <img src="images/doces/doce_13.webp" alt="Brigadeiro de Ninho com formato de flor e corante" loading="lazy">
+                                <img src="images/doces/doce_14.webp" alt="Brigadeiro de Ninho com formato de flor e corante" loading="lazy">
+                            </div>
+                            <button type="button" class="doces-carousel-prev" aria-label="Imagem anterior">‹</button>
+                            <button type="button" class="doces-carousel-next" aria-label="Próxima imagem">›</button>
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de Ninho com formato de flor e corante</h3>
+                            <span class="produto-price">R$ 12,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de Ninho com formato de flor e corante - R$ 12,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 13 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-16" data-images='["images/doces/doce_16.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_16.webp" alt="Brigadeiro de Raffaello" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de Raffaello</h3>
+                            <p>Massa feita com coco e farinha de amêndoas, com uma amêndoa dentro, finalizada com coco flocado.</p>
+                            <span class="produto-price">R$ 8,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de Raffaello - R$ 8,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 14 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-17" data-images='["images/doces/doce_17.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_17.webp" alt="Brigadeiro de Ninho com Nutella" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de Ninho com Nutella</h3>
+                            <p>Massa feita com Leite Ninho, passada no Leite Ninho e finalizada com uma pitada de Nutella.</p>
+                            <span class="produto-price">R$ 6,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de Ninho com Nutella - R$ 6,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 15 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-18" data-images='["images/doces/doce_18.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_18.webp" alt="Cento misto de brigadeiro de amendoim, moranguinho e Ninho" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Cento misto de brigadeiro de amendoim, moranguinho e Ninho</h3>
+                            <span class="produto-price">R$ 45,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Cento misto de brigadeiro de amendoim, moranguinho e Ninho - R$ 45,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 16 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doce-19" data-images='["images/doces/doce_19.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doce_19.webp" alt="Brigadeiro de chocolate preto" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de chocolate preto</h3>
+                            <p>Massa feita com chocolate 50% cacau, envolvida em granulado de chocolate preto.</p>
+                            <span class="produto-price">R$ 10,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de chocolate preto - R$ 10,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 17 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="brigadeiros" data-images='["images/doces/brigadeiros_otimizado.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/brigadeiros_otimizado.webp" alt="Brigadeiro de café" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de café</h3>
+                            <p>Massa feita com café solúvel e chocolate 50% cacau, com uma drágea de café, envolvida em granulado 50% cacau.</p>
+                            <span class="produto-price">R$ 55,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de café - R$ 55,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 18 -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="doces-sortidos" data-images='["images/doces/doces_otimizado.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/doces_otimizado.webp" alt="Brigadeiro de brulê" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de brulê</h3>
+                            <p>Massa feita com pasta concentrada de baunilha, envolvida em açúcar cristal e finalizada com maçarico.</p>
+                            <span class="produto-price">R$ 65,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de brulê - R$ 65,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 18: Brigadeiro de confete -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="brigadeiro-confete" data-images='["images/doces/ovos_chocolate_otimizado.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/ovos_chocolate_otimizado.webp" alt="Brigadeiro de confete" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Brigadeiro de confete</h3>
+                            <p>Massa de chocolate feita com cacau 50%, envolvida em mini confetes.</p>
+                            <span class="produto-price">R$ 3,50</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro de confete - R$ 3,50">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 19: Nega maluca -->
+                    <article class="produto-card doces-card" data-aos data-doces-id="ovos-chocolate" data-images='["images/doces/imagem_convertida_otimizado.webp"]'>
+                        <div class="produto-image">
+                            <img src="images/doces/imagem_convertida_otimizado.webp" alt="Nega maluca" loading="lazy">
+                        </div>
+                        <div class="produto-info">
+                            <h3>Nega maluca</h3>
+                            <p>Massa feita com chocolate 50% cacau, cobertura de ganache de chocolate 50% cacau com granulado de chocolate e confetes.</p>
+                            <span class="produto-price">R$ 75,00</span>
+                            <div class="card-buttons card-buttons--small">
+                                <button type="button" class="btn btn-saiba-mais" data-open-doces-modal>Ver detalhes</button>
+                                <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Nega maluca - R$ 75,00">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Juliana Doces e Salgados. Feito com carinho.</p>
+        </div>
+    </footer>
+
+    <a href="#doces" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </a>
+
+    <a href="#whatsapp" class="whatsapp-float" data-whatsapp aria-label="Pedir pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Modal Doces -->
+    <div class="modal-overlay" id="doces-modal-overlay" aria-hidden="true">
+        <div class="modal modal-doces" id="doces-modal" role="dialog" aria-labelledby="doces-modal-title" aria-modal="true">
+            <button class="modal-close" id="doces-modal-close" aria-label="Fechar">×</button>
+            <div class="modal-image modal-image--carousel">
+                <div class="doces-modal-carousel" id="doces-modal-carousel"></div>
+                <button type="button" class="doces-carousel-prev doces-carousel-prev--modal" id="doces-modal-prev" aria-label="Imagem anterior">‹</button>
+                <button type="button" class="doces-carousel-next doces-carousel-next--modal" id="doces-modal-next" aria-label="Próxima imagem">›</button>
+            </div>
+            <div class="modal-content">
+                <h2 class="modal-title" id="doces-modal-title"></h2>
+                <p class="modal-description" id="doces-modal-description"></p>
+                <span class="modal-price" id="doces-modal-price"></span>
+                <a href="#whatsapp" class="btn btn-primary btn-modal-whatsapp" id="doces-modal-whatsapp-btn" data-whatsapp>Pedir no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/doces.js"></script>
+</body>
+</html>

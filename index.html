@@ -2,19 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Cardápio Digital para Docerias | Modelo de Encomendas pelo WhatsApp</title>
     <meta name="description" content="Exemplo de cardápio digital para docerias. Seus clientes veem todos os produtos e pedem direto pelo WhatsApp.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/doces/brigadeiros_otimizado.webp" as="image">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
-            <a href="#inicio" class="navbar-logo">Exemplo de Doceria</a>
+            <a href="#inicio" class="navbar-logo">Juliana Doces e Salgados</a>
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu">
                 <span class="navbar-toggle-bar"></span>
                 <span class="navbar-toggle-bar"></span>
@@ -22,10 +23,14 @@
             </button>
             <div class="navbar-menu" id="navbar-menu">
                 <a href="#inicio" class="navbar-link">Início</a>
-                <a href="#queridinhos" class="navbar-link">Mais pedidos</a>
-                <a href="#cardapio" class="navbar-link">Cardápio</a>
+                <div class="menu-cardapio" id="menu-cardapio">
+                    <a href="#cardapio" class="navbar-link navbar-link--has-submenu" id="cardapio-trigger">Cardápio</a>
+                    <ul class="submenu" id="submenu-cardapio">
+                        <li><a href="doces.html" class="submenu-link">Doces</a></li>
+                        <li><a href="salgados.html" class="submenu-link">Salgados</a></li>
+                    </ul>
+                </div>
                 <a href="#kits" class="navbar-link">Kits</a>
-                <a href="#encomenda" class="navbar-link">Encomenda</a>
                 <a href="#whatsapp" class="btn btn-primary btn-navbar" data-whatsapp>
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -38,19 +43,21 @@
 
     <!-- 1. HERO SECTION -->
     <header class="hero" id="inicio">
-        <div class="hero-slider">
-            <div class="hero-slide hero-slide--active" style="background-image: url('https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=1920&q=85')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1549007994-cb92ca976d35?w=1920&q=85')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1511381939415-e44015466834?w=1920&q=85')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1558326567-98ae2405596b?w=1920&q=85')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1606312619070-d48b4d8ee995?w=1920&q=85')"></div>
+        <div class="hero-slider" aria-label="Carrossel de produtos">
+            <div class="hero-slide hero-slide--active" style="background-image: url('images/doces/brigadeiros_otimizado.webp')" aria-hidden="false"></div>
+            <div class="hero-slide" style="background-image: url('images/doces/doces_otimizado.webp')" aria-hidden="true"></div>
+            <div class="hero-slide" style="background-image: url('images/doces/doce_5.webp')" aria-hidden="true"></div>
+            <div class="hero-slide" style="background-image: url('images/doces/doce_17.webp')" aria-hidden="true"></div>
+            <div class="hero-slide" style="background-image: url('images/doces/doce_16.webp')" aria-hidden="true"></div>
+            <div class="hero-slide" style="background-image: url('images/salgados/salgado-10.webp')" aria-hidden="true"></div>
+            <div class="hero-slide" style="background-image: url('images/salgados/salgado-05.webp')" aria-hidden="true"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-exemplo">Exemplo de cardápio digital para docerias</p>
-            <h1 class="hero-title">Cardápio Digital para Docerias</h1>
-            <p class="hero-subtitle">Seus clientes veem todos os produtos e pedem direto pelo WhatsApp.</p>
-            <p class="hero-complemento">Perfeito para organizar encomendas em datas como a Páscoa.</p>
+            <p class="hero-exemplo">Sabores artesanais feitos com carinho</p>
+            <h1 class="hero-title">Juliana Doces e Salgados</h1>
+            <p class="hero-subtitle">Descubra nossos doces e salgados preparados com ingredientes selecionados.</p>
+            <p class="hero-complemento">Peça pelo WhatsApp e receba em casa.</p>
             <div class="hero-buttons">
                 <a href="#cardapio" class="btn btn-outline btn-hero">Ver Cardápio</a>
                 <a href="#whatsapp" class="btn btn-primary btn-hero" data-whatsapp>
@@ -73,45 +80,45 @@
             <h2 class="section-title">Produtos mais pedidos</h2>
             <p class="section-subtitle">Os mais pedidos pela doceria</p>
             <div class="queridinhos-grid">
-                <article class="queridinho-card" data-aos data-product-id="kinder">
+                <article class="queridinho-card" data-aos data-product-id="brig-cappuccino">
                     <div class="queridinho-image">
-                        <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=800&q=80" alt="Chocolates Artesanais Premium">
+                        <img src="images/doces/doce_5.webp" alt="Brigadeiro de cappuccino" loading="lazy">
                     </div>
                     <div class="queridinho-info">
-                        <h3>Chocolates Artesanais Premium</h3>
-                        <p>Chocolates finos produzidos artesanalmente com cacau selecionado. Uma verdadeira experiência de sabor.</p>
-                        <span class="queridinho-price">R$ 59,90</span>
+                        <h3>Brigadeiro de cappuccino</h3>
+                        <p>Massa feita com chocolate 50% cacau, café solúvel e canela, passada no açúcar.</p>
+                        <span class="queridinho-price">R$ 3,20</span>
                         <div class="card-buttons">
                             <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Chocolates Artesanais Premium - R$ 59,90">Pedir no WhatsApp</a>
+                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Brigadeiro de cappuccino - R$ 3,20">Pedir no WhatsApp</a>
                         </div>
                     </div>
                 </article>
-                <article class="queridinho-card" data-aos data-product-id="oreo">
+                <article class="queridinho-card" data-aos data-product-id="ninho-nutella">
                     <div class="queridinho-image">
-                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" alt="Bolo de Chocolate">
+                        <img src="images/doces/doce_17.webp" alt="Brigadeiro de Ninho com Nutella" loading="lazy">
                     </div>
                     <div class="queridinho-info">
-                        <h3>Bolo de Chocolate</h3>
-                        <p>Bolo macio e úmido de chocolate, coberto com ganache cremosa. Clássico irresistível!</p>
-                        <span class="queridinho-price">R$ 64,90</span>
+                        <h3>Brigadeiro de Ninho com Nutella</h3>
+                        <p>Massa feita com Leite Ninho, passada no Leite Ninho e finalizada com uma pitada de Nutella.</p>
+                        <span class="queridinho-price">R$ 6,00</span>
                         <div class="card-buttons">
                             <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Bolo de Chocolate - R$ 64,90">Pedir no WhatsApp</a>
+                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Brigadeiro de Ninho com Nutella - R$ 6,00">Pedir no WhatsApp</a>
                         </div>
                     </div>
                 </article>
-                <article class="queridinho-card" data-aos data-product-id="ferrero">
+                <article class="queridinho-card" data-aos data-product-id="mini-hamburguer">
                     <div class="queridinho-image">
-                        <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800&q=80" alt="Bombons com Avelãs">
+                        <img src="images/salgados/salgado-10.webp" alt="Mini hambúrguer" loading="lazy">
                     </div>
                     <div class="queridinho-info">
-                        <h3>Bombons com Avelãs</h3>
-                        <p>Chocolates artesanais recheados com avelãs crocantes e praliné. Sofisticação em cada mordida.</p>
-                        <span class="queridinho-price">R$ 79,90</span>
+                        <h3>Mini hambúrguer</h3>
+                        <p>Pão brioche com mini hambúrguer de carne, queijo e maionese.</p>
+                        <span class="queridinho-price">R$ 6,00</span>
                         <div class="card-buttons">
                             <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Bombons com Avelãs - R$ 79,90">Pedir no WhatsApp</a>
+                            <a href="#whatsapp" class="btn btn-primary btn-full" data-whatsapp data-product="Mini hambúrguer - R$ 6,00">Pedir no WhatsApp</a>
                         </div>
                     </div>
                 </article>
@@ -124,119 +131,27 @@
         <div class="container">
             <h2 class="section-title">Cardápio Completo</h2>
             <p class="section-subtitle">Catálogo com todas as delícias artesanais</p>
-            <div class="cardapio-grid">
-                <article class="produto-card" data-aos data-product-id="trufa-belga">
+            <div class="cardapio-grid cardapio-grid--categorias">
+                <a href="doces.html" class="produto-card cardapio-categoria-card" data-aos>
                     <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=80" alt="Trufas de Chocolate Belga">
+                        <img src="images/doces/doces_otimizado.webp" alt="Doces artesanais" loading="lazy">
                     </div>
                     <div class="produto-info">
-                        <h3>Trufas de Chocolate Belga</h3>
-                        <p>Chocolate belga 70% cacau com recheio cremoso de trufa. Intensidade e suavidade.</p>
-                        <span class="produto-price">R$ 89,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Trufas de Chocolate Belga - R$ 89,90">Pedir no WhatsApp</a>
-                        </div>
+                        <h3>Doces</h3>
+                        <p>Conheça nossos doces artesanais feitos com ingredientes selecionados.</p>
+                        <span class="btn btn-primary btn-full btn-categoria">Ver cardápio de doces</span>
                     </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="coco-maracuja">
+                </a>
+                <a href="salgados.html" class="produto-card cardapio-categoria-card" data-aos>
                     <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=600&q=80" alt="Macarons Gourmet">
+                        <img src="images/salgados/salgado-01.webp" alt="Salgados artesanais" loading="lazy">
                     </div>
                     <div class="produto-info">
-                        <h3>Macarons Gourmet</h3>
-                        <p>Delicados macarons artesanais com recheio cremoso em diversos sabores.</p>
-                        <span class="produto-price">R$ 79,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Macarons Gourmet - R$ 79,90">Pedir no WhatsApp</a>
-                        </div>
+                        <h3>Salgados</h3>
+                        <p>Veja nossa seleção de salgados fresquinhos preparados diariamente.</p>
+                        <span class="btn btn-primary btn-full btn-categoria">Ver cardápio de salgados</span>
                     </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="ninho-nutella">
-                    <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=80" alt="Caixa de Trufas">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Caixa de Trufas</h3>
-                        <p>Seleção de trufas artesanais em sabores variados. Presente perfeito para ocasiões especiais.</p>
-                        <span class="produto-price">R$ 94,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Caixa de Trufas - R$ 94,90">Pedir no WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="meio-amargo">
-                    <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=600&q=80" alt="Chocolates com Avelã">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Chocolates com Avelã</h3>
-                        <p>Chocolates artesanais com avelãs crocantes e toque de flor de sal. Textura e sabor únicos.</p>
-                        <span class="produto-price">R$ 84,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Chocolates com Avelã - R$ 84,90">Pedir no WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="brigadeiro">
-                    <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=80" alt="Brigadeiro Gourmet">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Brigadeiro Gourmet</h3>
-                        <p>Brigadeiros artesanais feitos com chocolate belga e granulado especial. O clássico elevado.</p>
-                        <span class="produto-price">R$ 69,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brigadeiro Gourmet - R$ 69,90">Pedir no WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="brownie">
-                    <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80" alt="Brownie Artesanal">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Brownie Artesanal</h3>
-                        <p>Brownie macio e intenso de chocolate, perfeito para quem ama doces ricos e marcantes.</p>
-                        <span class="produto-price">R$ 74,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Brownie Artesanal - R$ 74,90">Pedir no WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="dois-amores">
-                    <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=600&q=80" alt="Chocolates Sortidos">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Chocolates Sortidos</h3>
-                        <p>Seleção variada de chocolates artesanais em sabores ao leite, branco e meio amargo.</p>
-                        <span class="produto-price">R$ 72,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Chocolates Sortidos - R$ 72,90">Pedir no WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="produto-card" data-aos data-product-id="surpresa">
-                    <div class="produto-image">
-                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=80" alt="Beijinho Gourmet">
-                    </div>
-                    <div class="produto-info">
-                        <h3>Beijinho Gourmet</h3>
-                        <p>Beijinhos artesanais com coco e leite condensado. Cremosos e irresistíveis.</p>
-                        <span class="produto-price">R$ 54,90</span>
-                        <div class="card-buttons card-buttons--small">
-                            <button type="button" class="btn btn-saiba-mais" data-open-modal>Saiba mais</button>
-                            <a href="#whatsapp" class="btn btn-whatsapp" data-whatsapp data-product="Beijinho Gourmet - R$ 54,90">Pedir no WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
+                </a>
             </div>
         </div>
     </section>

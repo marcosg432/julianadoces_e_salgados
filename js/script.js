@@ -15,32 +15,32 @@ const CONFIG = {
 
 // Dados dos produtos para o modal
 const PRODUCT_DATA = {
-    kinder: {
-        name: 'Chocolates Artesanais Premium',
-        description: 'Chocolates finos produzidos artesanalmente com cacau selecionado. Uma verdadeira experiência de sabor que derrete na boca.',
-        ingredients: ['Cacau selecionado', 'Chocolate belga', 'Produção artesanal'],
-        peso: '350g',
-        price: 'R$ 59,90',
-        image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=800&q=80',
-        whatsappMessage: 'Chocolates Artesanais Premium - R$ 59,90'
+    'brig-cappuccino': {
+        name: 'Brigadeiro de cappuccino',
+        description: 'Massa feita com chocolate 50% cacau, café solúvel e canela, passada no açúcar. O sabor do café em um brigadeiro cremoso.',
+        ingredients: ['Chocolate 50% cacau', 'Café solúvel', 'Canela', 'Açúcar'],
+        peso: 'Unidade',
+        price: 'R$ 3,20',
+        image: 'images/doces/doce_5.webp',
+        whatsappMessage: 'Brigadeiro de cappuccino - R$ 3,20'
     },
-    oreo: {
-        name: 'Bolo de Chocolate',
-        description: 'Bolo macio e úmido de chocolate, coberto com ganache cremosa. O clássico irresistível que todo mundo ama.',
-        ingredients: ['Farinha de trigo', 'Chocolate 50%', 'Ganache de chocolate'],
-        peso: 'Fatia 500g',
-        price: 'R$ 64,90',
-        image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80',
-        whatsappMessage: 'Bolo de Chocolate - R$ 64,90'
+    'ninho-nutella': {
+        name: 'Brigadeiro de Ninho com Nutella',
+        description: 'Massa feita com Leite Ninho, passada no Leite Ninho e finalizada com uma pitada de Nutella. Cremoso e irresistível.',
+        ingredients: ['Leite Ninho', 'Nutella', 'Leite condensado'],
+        peso: 'Unidade',
+        price: 'R$ 6,00',
+        image: 'images/doces/doce_17.webp',
+        whatsappMessage: 'Brigadeiro de Ninho com Nutella - R$ 6,00'
     },
-    ferrero: {
-        name: 'Bombons com Avelãs',
-        description: 'Chocolates artesanais recheados com avelãs crocantes e praliné. Sofisticação e sabor em cada mordida.',
-        ingredients: ['Chocolate ao leite belga', 'Avelãs', 'Praliné'],
-        peso: '400g',
-        price: 'R$ 79,90',
-        image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800&q=80',
-        whatsappMessage: 'Bombons com Avelãs - R$ 79,90'
+    'mini-hamburguer': {
+        name: 'Mini hambúrguer',
+        description: 'Pão brioche com mini hambúrguer de carne, queijo e maionese. Perfeito para um lanche saboroso.',
+        ingredients: ['Pão brioche', 'Carne', 'Queijo', 'Maionese'],
+        peso: 'Unidade',
+        price: 'R$ 6,00',
+        image: 'images/salgados/salgado-10.webp',
+        whatsappMessage: 'Mini hambúrguer - R$ 6,00'
     },
     'trufa-belga': {
         name: 'Trufas de Chocolate Belga',
@@ -210,6 +210,18 @@ function initNavbar() {
     toggle?.addEventListener('click', toggleMenu);
 
     menu?.querySelectorAll('.navbar-link').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            if (link.classList.contains('navbar-link--has-submenu') && window.innerWidth <= 900) {
+                e.preventDefault();
+                const menuCardapio = link.closest('.menu-cardapio');
+                menuCardapio?.classList.toggle('is-open');
+                return;
+            }
+            closeMenu();
+        });
+    });
+
+    menu?.querySelectorAll('.submenu-link').forEach((link) => {
         link.addEventListener('click', () => {
             closeMenu();
         });
@@ -273,19 +285,23 @@ function initScrollAnimations() {
 }
 
 // ============================================
-// HERO SLIDER
+// HERO CARROSSEL
 // ============================================
 function initHeroSlider() {
     const slides = document.querySelectorAll('.hero-slide');
     if (slides.length === 0) return;
 
     let currentIndex = 0;
-    const interval = 4000;
+    const interval = 3000; // 3 segundos
 
     function nextSlide() {
         slides[currentIndex].classList.remove('hero-slide--active');
+        slides[currentIndex].setAttribute('aria-hidden', 'true');
+
         currentIndex = (currentIndex + 1) % slides.length;
+
         slides[currentIndex].classList.add('hero-slide--active');
+        slides[currentIndex].setAttribute('aria-hidden', 'false');
     }
 
     setInterval(nextSlide, interval);

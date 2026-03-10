@@ -1,0 +1,224 @@
+/* ============================================
+   PÁGINA DOCES - Estilos específicos
+   Reutiliza produto-card do cardápio
+   ============================================ */
+
+.doces-page {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.doces-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, var(--creme-dark) 0%, var(--creme) 100%);
+}
+
+/* Grid responsivo: 4 cols desktop, 3 tablet, 1-2 mobile */
+.doces-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+/* Cards com altura uniforme - alinhados na base */
+.doces-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doces-card .produto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.doces-card .card-buttons {
+    margin-top: auto;
+}
+
+.doces-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px var(--shadow-strong);
+}
+
+.doces-card .produto-image img {
+    transition: transform 0.3s ease;
+}
+
+.doces-card:hover .produto-image img {
+    transform: scale(1.03);
+}
+
+/* Carrossel dentro do card */
+.produto-image--carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.doces-carousel {
+    display: flex;
+    transition: transform 0.4s ease;
+    height: 100%;
+}
+
+.doces-carousel img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.doces-carousel-prev,
+.doces-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    color: var(--chocolate);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+    padding: 0;
+}
+
+.doces-carousel-prev {
+    left: 8px;
+}
+
+.doces-carousel-next {
+    right: 8px;
+}
+
+.doces-carousel-prev:hover,
+.doces-carousel-next:hover {
+    background: var(--chocolate);
+    color: var(--creme);
+}
+
+/* Ocultar botões do carrossel em cards com uma imagem */
+.doces-card:not(.doces-card--carousel) .doces-carousel-prev,
+.doces-card:not(.doces-card--carousel) .doces-carousel-next {
+    display: none;
+}
+
+/* Botões dos cards - alinhamento */
+.doces-card .card-buttons--small {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.doces-card .card-buttons--small .btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+}
+
+/* Link ativo na navbar */
+.navbar-link--active {
+    color: var(--gold-light) !important;
+}
+
+.navbar-link--active::after {
+    width: 100%;
+}
+
+/* Modal Doces - carrossel */
+.modal-image--carousel {
+    position: relative;
+    min-height: 200px;
+}
+
+.doces-modal-carousel {
+    display: flex;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+.doces-modal-carousel img {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.doces-carousel-prev--modal,
+.doces-carousel-next--modal {
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
+}
+
+.doces-carousel-prev--modal {
+    left: 12px;
+}
+
+.doces-carousel-next--modal {
+    right: 12px;
+}
+
+/* Ocultar navegação do modal quando só tem 1 imagem */
+.modal-doces .modal-image--carousel:has(.doces-modal-carousel img:only-child) .doces-carousel-prev--modal,
+.modal-doces .modal-image--carousel:has(.doces-modal-carousel img:only-child) .doces-carousel-next--modal {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 1024px) {
+    .doces-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .doces-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .doces-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .doces-section {
+        padding: 3rem 0;
+    }
+
+    .doces-section .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .doces-page {
+        padding-top: 70px;
+    }
+
+    .doces-card .produto-info {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .doces-section .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
