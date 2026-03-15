@@ -19,28 +19,28 @@ const PRODUCT_DATA = {
         name: 'Brigadeiro de cappuccino',
         description: 'Massa feita com chocolate 50% cacau, café solúvel e canela, passada no açúcar. O sabor do café em um brigadeiro cremoso.',
         ingredients: ['Chocolate 50% cacau', 'Café solúvel', 'Canela', 'Açúcar'],
-        peso: 'Unidade',
-        price: 'R$ 3,20',
+        peso: 'Quantidade mínima: 20 unidades',
+        price: 'R$ 120,00 o cento',
         image: 'images/doces/doce_5.webp',
-        whatsappMessage: 'Brigadeiro de cappuccino - R$ 3,20'
+        whatsappMessage: 'Brigadeiro de cappuccino - R$ 120,00 o cento'
     },
     'ninho-nutella': {
         name: 'Brigadeiro de Ninho com Nutella',
         description: 'Massa feita com Leite Ninho, passada no Leite Ninho e finalizada com uma pitada de Nutella. Cremoso e irresistível.',
         ingredients: ['Leite Ninho', 'Nutella', 'Leite condensado'],
-        peso: 'Unidade',
-        price: 'R$ 6,00',
+        peso: 'Quantidade mínima: 20 unidades',
+        price: 'R$ 150,00 o cento',
         image: 'images/doces/doce_17.webp',
-        whatsappMessage: 'Brigadeiro de Ninho com Nutella - R$ 6,00'
+        whatsappMessage: 'Brigadeiro de Ninho com Nutella - R$ 150,00 o cento'
     },
     'mini-hamburguer': {
         name: 'Mini hambúrguer',
         description: 'Pão brioche com mini hambúrguer de carne, queijo e maionese. Perfeito para um lanche saboroso.',
         ingredients: ['Pão brioche', 'Carne', 'Queijo', 'Maionese'],
-        peso: 'Unidade',
-        price: 'R$ 6,00',
+        peso: 'Quantidade mínima: 25 unidades',
+        price: 'R$ 170 o cento',
         image: 'images/salgados/salgado-10.webp',
-        whatsappMessage: 'Mini hambúrguer - R$ 6,00'
+        whatsappMessage: 'Mini hambúrguer - R$ 170 o cento'
     },
     'trufa-belga': {
         name: 'Trufas de Chocolate Belga',
