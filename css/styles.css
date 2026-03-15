@@ -1112,6 +1112,97 @@ a {
 }
 
 /* ============================================
+   INFORMAÇÕES IMPORTANTES
+   ============================================ */
+.informacoes {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, var(--creme-dark) 0%, var(--creme) 100%);
+}
+
+.informacoes-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.informacoes-item {
+    background: var(--white);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.informacoes-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--chocolate-dark);
+    margin-bottom: 0.5rem;
+}
+
+.informacoes-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.modal-informacoes {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--creme-dark);
+}
+
+.modal-informacoes summary {
+    font-size: 0.9rem;
+    color: var(--chocolate-medium);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.modal-informacoes summary::-webkit-details-marker {
+    display: none;
+}
+
+.modal-informacoes summary::after {
+    content: ' ▶';
+    font-size: 0.75rem;
+}
+
+.modal-informacoes[open] summary::after {
+    content: ' ▼';
+}
+
+.modal-informacoes-content {
+    margin-top: 0.75rem;
+}
+
+.modal-informacoes-content p,
+.modal-informacoes-content ul {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.modal-informacoes-content ul {
+    margin-left: 1.25rem;
+}
+
+.footer-link {
+    font-size: 0.85rem;
+    color: var(--creme-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-link:hover {
+    color: var(--white);
+}
+
+/* ============================================
    MODAL PRODUTO
    ============================================ */
 .modal-overlay {
@@ -1262,6 +1353,271 @@ a {
     .modal-title {
         font-size: 1.4rem;
     }
+}
+
+/* ============================================
+   INFORMAÇÕES IMPORTANTES
+   ============================================ */
+.informacoes {
+    padding: 4rem 0;
+    background: var(--creme-dark);
+}
+
+.informacoes-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.informacoes-item {
+    background: var(--white);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.informacoes-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--chocolate-dark);
+    margin-bottom: 0.5rem;
+}
+
+.informacoes-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.modal-informacoes {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--creme-dark);
+}
+
+.modal-informacoes summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--chocolate-medium);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.modal-informacoes summary:hover {
+    color: var(--chocolate-dark);
+}
+
+.modal-informacoes-content {
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.modal-informacoes-content p,
+.modal-informacoes-content ul {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.modal-informacoes-content ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+.footer-link {
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    transition: var(--transition);
+}
+
+.footer-link:hover {
+    color: var(--white);
+}
+
+/* ============================================
+   INFORMAÇÕES IMPORTANTES
+   ============================================ */
+.informacoes {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, var(--creme-dark) 0%, var(--creme) 100%);
+}
+
+.informacoes-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.informacoes-item {
+    background: var(--white);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.informacoes-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--chocolate-medium);
+    margin-bottom: 0.5rem;
+}
+
+.informacoes-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.modal-informacoes {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--creme-dark);
+}
+
+.modal-informacoes summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--chocolate-medium);
+    font-weight: 500;
+    list-style: none;
+    padding: 0.25rem 0;
+}
+
+.modal-informacoes summary::-webkit-details-marker {
+    display: none;
+}
+
+.modal-informacoes summary::after {
+    content: ' ▼';
+    font-size: 0.75em;
+}
+
+.modal-informacoes[open] summary::after {
+    content: ' ▲';
+}
+
+.modal-informacoes-content {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.modal-informacoes-content p,
+.modal-informacoes-content ul {
+    margin: 0.4rem 0;
+}
+
+.modal-informacoes-content ul {
+    padding-left: 1.25rem;
+}
+
+.footer-link {
+    color: var(--creme-dark);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-link:hover {
+    color: var(--white);
+}
+
+/* ============================================
+   INFORMAÇÕES IMPORTANTES
+   ============================================ */
+.informacoes {
+    padding: 4rem 0;
+    background: var(--creme-dark);
+}
+
+.informacoes-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.informacoes-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.informacoes-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--chocolate-dark);
+    margin-bottom: 0.5rem;
+}
+
+.informacoes-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.modal-informacoes {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--creme-dark);
+}
+
+.modal-informacoes summary {
+    font-size: 0.9rem;
+    color: var(--chocolate-medium);
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+}
+
+.modal-informacoes summary::-webkit-details-marker {
+    display: none;
+}
+
+.modal-informacoes summary::after {
+    content: ' ▼';
+    font-size: 0.75rem;
+}
+
+.modal-informacoes[open] summary::after {
+    content: ' ▲';
+}
+
+.modal-informacoes-content {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.modal-informacoes-content p,
+.modal-informacoes-content ul {
+    margin-bottom: 0.5rem;
+}
+
+.modal-informacoes-content ul {
+    padding-left: 1.25rem;
+}
+
+.footer-link {
+    color: var(--creme-dark);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-link:hover {
+    color: var(--white);
 }
 
 /* ============================================
