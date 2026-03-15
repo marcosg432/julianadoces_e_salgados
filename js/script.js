@@ -7,7 +7,7 @@
 // CONFIGURAÇÃO - Altere o número para o seu WhatsApp
 // ============================================
 const CONFIG = {
-    whatsappNumber: '5511999999999',
+    whatsappNumber: '5547991225798',
     defaultMessage: 'Olá! Gostaria de fazer um pedido.',
     floatMessage: 'Olá! Gostaria de mais informações sobre os produtos.',
     encomendaMessage: 'Olá, gostaria de fazer uma encomenda personalizada de Páscoa.'
@@ -211,7 +211,7 @@ function initNavbar() {
 
     menu?.querySelectorAll('.navbar-link').forEach((link) => {
         link.addEventListener('click', (e) => {
-            if (link.classList.contains('navbar-link--has-submenu') && window.innerWidth <= 900) {
+            if (link.classList.contains('navbar-link--has-submenu')) {
                 e.preventDefault();
                 const menuCardapio = link.closest('.menu-cardapio');
                 menuCardapio?.classList.toggle('is-open');
@@ -223,8 +223,16 @@ function initNavbar() {
 
     menu?.querySelectorAll('.submenu-link').forEach((link) => {
         link.addEventListener('click', () => {
+            link.closest('.menu-cardapio')?.classList.remove('is-open');
             closeMenu();
         });
+    });
+
+    /* Fechar submenu ao clicar fora (desktop) */
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu-cardapio')) {
+            document.querySelector('.menu-cardapio')?.classList.remove('is-open');
+        }
     });
 
     menu?.querySelector('.btn-navbar')?.addEventListener('click', closeMenu);

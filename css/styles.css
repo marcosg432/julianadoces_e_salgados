@@ -197,10 +197,26 @@ a {
     visibility: hidden;
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 100;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+/* Ponte invisível para manter hover ao mover o mouse para o submenu */
+.menu-cardapio::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: transparent;
 }
 
 .menu-cardapio:hover .submenu {
+    margin-top: 0.25rem;
+}
+
+.menu-cardapio:hover .submenu,
+.menu-cardapio.is-open .submenu {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
@@ -890,6 +906,140 @@ a {
 }
 
 /* ============================================
+   4. LOCALIZAÇÃO
+   ============================================ */
+.localizacao {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.localizacao-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--creme);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 40px var(--shadow);
+}
+
+.localizacao-imagem {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.localizacao-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.localizacao-info {
+    padding: 2rem;
+}
+
+.localizacao-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    color: var(--chocolate-dark);
+    margin-bottom: 1rem;
+}
+
+.localizacao-endereco {
+    font-style: normal;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.btn-localizacao {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+.localizacao-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--chocolate-medium);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.localizacao-instagram:hover {
+    color: var(--chocolate-dark);
+}
+
+.localizacao-instagram svg {
+    flex-shrink: 0;
+}
+
+/* Localização - mobile e tablet */
+@media (max-width: 900px) {
+    .localizacao-box {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .localizacao-imagem {
+        aspect-ratio: 16/10;
+        min-height: 200px;
+    }
+    .localizacao-info {
+        padding: 1.5rem 1.25rem;
+        text-align: center;
+    }
+    .localizacao-info h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+    .localizacao-endereco {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.7;
+    }
+    .btn-localizacao {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.25rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .localizacao-box {
+        margin: 0;
+        border-radius: var(--radius);
+    }
+    .localizacao-imagem {
+        min-height: 160px;
+        aspect-ratio: 4/3;
+    }
+    .localizacao-info {
+        padding: 1.25rem 1rem;
+    }
+    .localizacao-info h3 {
+        font-size: 1.25rem;
+    }
+    .localizacao-endereco {
+        font-size: 0.95rem;
+    }
+    .btn-localizacao {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
    5. ENCOMENDA PERSONALIZADA
    ============================================ */
 .encomenda {
@@ -1125,6 +1275,97 @@ a {
     font-size: 0.9rem;
 }
 
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-content p {
+    margin: 0;
+}
+.footer-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--creme-dark);
+    padding: 0.35rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+.footer-instagram:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--creme-dark);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.footer-instagram:hover {
+    color: #E4405F;
+    transform: scale(1.1);
+}
+
+.navbar-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--creme);
+    padding: 0.35rem;
+    transition: var(--transition);
+}
+
+.navbar:not(.navbar--scrolled) .navbar-instagram {
+    color: var(--creme);
+}
+
+.navbar-instagram:hover {
+    color: #E4405F;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--creme-dark);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.footer-instagram:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
 /* ============================================
    BOTÃO VOLTAR AO TOPO
    ============================================ */
@@ -1298,6 +1539,7 @@ a {
     .queridinhos,
     .cardapio,
     .kits,
+    .localizacao,
     .encomenda,
     .urgencia {
         padding: 3rem 0;

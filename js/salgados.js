@@ -4,9 +4,67 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initSalgadosCarousel();
     initSalgadosModal();
     initSalgadosCardClick();
 });
+
+// ============================================
+// CARROSSEL NOS CARDS (múltiplas imagens)
+// ============================================
+function initSalgadosCarousel() {
+    document.querySelectorAll('.salgados-card--carousel [data-carousel], .doces-card--carousel.salgados-card [data-carousel]').forEach((carouselEl) => {
+        const images = carouselEl.querySelectorAll('img');
+        if (images.length <= 1) return;
+
+        const card = carouselEl.closest('.salgados-card');
+        const prevBtn = card?.querySelector('.doces-carousel-prev');
+        const nextBtn = card?.querySelector('.doces-carousel-next');
+
+        let index = 0;
+
+        function updateCarousel() {
+            carouselEl.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function goPrev() {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        }
+
+        function goNext() {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        }
+
+        prevBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goPrev();
+        });
+
+        nextBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goNext();
+        });
+
+        /* Suporte a swipe/arrastar no toque (mobile) */
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselEl.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselEl.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) goNext();
+                else goPrev();
+            }
+        }, { passive: true });
+    });
+}
 
 // ============================================
 // MODAL SALGADOS
