@@ -792,6 +792,13 @@ a {
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--chocolate-medium);
+    margin-bottom: 0.25rem;
+}
+
+.produto-min {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--chocolate-light);
     margin-bottom: 0.75rem;
 }
 

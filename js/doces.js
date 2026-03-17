@@ -53,10 +53,14 @@ function initDocesModal() {
         const images = imagesJson ? JSON.parse(imagesJson) : [];
         const title = card.querySelector('h3')?.textContent || '';
         const description = card.querySelector('.produto-info p')?.textContent || '';
-        const price = card.querySelector('.produto-price')?.textContent || '';
+        const priceEl = card.querySelector('.produto-price');
+        const minEl = card.querySelector('.produto-min');
+        const price = priceEl?.textContent || '';
+        const minText = minEl?.textContent?.replace(/^Quantidade mínima:\s*/i, '') || '';
+        const priceDisplay = minText ? `${price} · Qtd mín. ${minText}` : price;
         const whatsappProduct = card.querySelector('[data-product]')?.getAttribute('data-product') || `${title} - ${price}`;
 
-        DOCES_DATA[id] = { id, images, title, description, price, whatsappProduct };
+        DOCES_DATA[id] = { id, images, title, description, price: priceDisplay, whatsappProduct };
     });
 
     const overlay = document.getElementById('doces-modal-overlay');
