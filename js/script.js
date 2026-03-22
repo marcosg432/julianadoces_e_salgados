@@ -38,9 +38,9 @@ const PRODUCT_DATA = {
         description: 'Pão brioche com mini hambúrguer de carne, queijo e maionese. Perfeito para um lanche saboroso.',
         ingredients: ['Pão brioche', 'Carne', 'Queijo', 'Maionese'],
         peso: 'Quantidade mínima: 25 unidades',
-        price: 'R$ 170 o cento',
+        price: 'R$ 170,00 o cento',
         image: 'images/salgados/salgado-10.webp',
-        whatsappMessage: 'Mini hambúrguer - R$ 170 o cento'
+        whatsappMessage: 'Mini hambúrguer - R$ 170,00 o cento'
     },
     'trufa-belga': {
         name: 'Trufas de Chocolate Belga',
