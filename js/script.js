@@ -34,13 +34,13 @@ const PRODUCT_DATA = {
         whatsappMessage: 'Brigadeiro de Ninho com Nutella - R$ 150,00 o cento'
     },
     'mini-hamburguer': {
-        name: 'Mini hambúrguer',
+        name: 'Pão com mini hambúrguer',
         description: 'Pão brioche com mini hambúrguer de carne, queijo e maionese. Perfeito para um lanche saboroso.',
         ingredients: ['Pão brioche', 'Carne', 'Queijo', 'Maionese'],
         peso: 'Quantidade mínima: 25 unidades',
-        price: 'R$ 170,00 o cento',
+        price: 'R$ 3,00 a unidade',
         image: 'images/salgados/salgado-10.webp',
-        whatsappMessage: 'Mini hambúrguer - R$ 170,00 o cento'
+        whatsappMessage: 'Pão com mini hambúrguer - R$ 3,00 a unidade'
     },
     'trufa-belga': {
         name: 'Trufas de Chocolate Belga',
